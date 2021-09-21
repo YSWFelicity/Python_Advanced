@@ -18,23 +18,19 @@ def get_race_stats(distance, hours, minutes):
     # Calculate the total hours and total minutes for pace and mph 
     total_hours = float(hours + minutes/HOUR_TO_MIN)
     total_mins = float(hours*HOUR_TO_MIN + minutes)
-    total_secs = float(total_hours * HOUR_TO_SEC + total_mins * MIN_TO_SEC)
+    total_secs = float(hours * HOUR_TO_SEC + minutes * MIN_TO_SEC)
     # Calculate pace and separate into minutes and seconds  
-    
-    pace_mins = round(miles / total_mins)
-    pace_secs = float(float(miles / total_mins) - pace_mins) * MIN_TO_SEC
+    total_pace_secs = round(total_secs / miles, 2)
+    pace_mins = int(round(total_pace_secs // MIN_TO_SEC))
+    pace_secs = int(round(total_pace_secs % MIN_TO_SEC))
     
 
-    mph = float(miles / total_hours)
+    mph = round(float(miles / total_hours), 2)
 
 # Define special cases 
-    if miles == 1:
-        miles_txt = "1 mile\n"
-    else: 
-        miles_txt = "{:.2f} miles\n".format(miles)
-
-    pace_txt = "{pace_mins}:{pace_mins}".format(pace_mins, pace_secs)
-    mph_txt = "{:.2f}".format(mph)
+    miles_txt = "{:.2f} miles, ".format(miles)
+    pace_txt = "{}:{} pace, ".format(pace_mins, pace_secs)
+    mph_txt = "{} MPH".format(mph)
 
     return miles_txt + pace_txt + mph_txt
 
@@ -50,6 +46,22 @@ def get_input():
 
 kilometers, hours, mins = get_input()
 
-get_race_stats(kilometers, hours, mins))
+print(get_race_stats(kilometers, hours, mins))
 
-# new line test new version
+# Test cases1: 
+# How many kilometers did you run? 5 
+# What was your finish time? Enter hours: 0
+# Enter minutes: 30
+# 3.11 miles, 9:40 pace, 6.21 MPH
+
+# Test cases2: 
+# How many kilometers did you run? 10 
+# What was your finish time? Enter hours: 20
+# Enter minutes: 15
+# 6.21 miles, 195:37 pace, 0.31 MPH
+
+# Test cases3: 
+# How many kilometers did you run? 30.5 
+# What was your finish time? Enter hours: 23.4
+# Enter minutes: 30.2
+# 18.94 miles, 75:42 pace, 0.79 MPH
