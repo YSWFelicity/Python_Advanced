@@ -11,7 +11,7 @@ def main():
     NO = "N"
     MIN_TEMP = 35
     MAX_TEMP = 75
-    DEFAULT_DURATION = 45
+    STANDARD_DURATION = 45
     SHORT_DURATION = 30
 
     day = input("What day is it? ").upper()
@@ -36,7 +36,7 @@ def main():
         if not is_workout_day:
             print("Take a rest day")
         else:
-            duration = DEFAULT_DURATION
+            duration = STANDARD_DURATION
             exercise = "RUN"
             if is_raining:
                 exercise = "Swim"
