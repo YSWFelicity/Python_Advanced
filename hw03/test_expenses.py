@@ -1,3 +1,10 @@
+'''
+Yingshu Wang
+CS 5001, Fall 2021
+Test cases for expenses.py
+'''
+
+
 from expenses import calculate_mileage, get_reimbursement_amount, \
                      get_actual_trip_cost, get_actual_mileage_rate
 from pytest import approx
