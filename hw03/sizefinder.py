@@ -122,14 +122,14 @@ def get_mens_size(chest):
             and the common interval of each step size of mens.
     '''
     MENS_MIN = 34
-    MENS_MAX = 53
+    MENS_MAX = 52
     INTERVAL_MEN = 3
     return "Mens size: " + get_size(chest, MENS_MIN, MENS_MAX, INTERVAL_MEN)
 
 
 def main():
     MIN_INCHES = 26
-    MAX_INCHES = 52
+    MAX_INCHES = 51
     chest = float(input("Chest measurement in inches: "))
     if size_valid(chest, MIN_INCHES, MAX_INCHES):
         print("Your size choices:")
