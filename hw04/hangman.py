@@ -15,7 +15,7 @@ def main():
         if game(word_list, word_index) is True:
             win += 1
         word_index += 1
-    print("You won " + str(win) + "out of 3")
+    print("You won " + str(win) + " out of 3")
     # When the user has played all 3 rounds
 
 
