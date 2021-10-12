@@ -14,9 +14,9 @@ def is_pal(string):
 # affect the outcome, neither do the case of characters. Punctuation marks do
 # influence the outcome.
 
-    if len(string) <= 1:
+    if len(string) < 2:
         # Automatic sucess cases
-        return True
+        return False
     else:
         # Seperate string at midpoint
         s_len = len(string)
