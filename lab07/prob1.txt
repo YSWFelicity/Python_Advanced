@@ -1,0 +1,20 @@
+Problem 1 
+
+Example 1: 
+Call 3, [1, 1, 2], N, [2] + rev_list([1,1])
+Call 4, [1, 1], N, [1] + rev_list([1])
+Call 5, [1],  Y, [1]
+Return 3, [1, 1, 2], [2] + [1, 1]
+Return 4, [1, 1, 2, 3], [3] + [2, 1, 1]
+Return 5, [1, 1, 2, 3, 5], [5] + [3, 2, 1, 1]
+
+Example 2:
+Call 2, ‘bceb’, N, True and spam(‘bce’)
+Call 3, ‘bce’, N, True and spam(‘bc’)
+Call 4, ‘bc’, N, True and spam(‘b’)
+Call 5, ‘b’, Y, True
+Return 1, ‘b’, True
+Return 2, ‘bc’, ‘b’
+Return 3, ‘bce’, ‘bc’
+Return 4, ‘bceb’, ‘bce’
+Return 5, ‘bceba’, ‘bceb’
