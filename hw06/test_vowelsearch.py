@@ -2,7 +2,7 @@
 Yingshu Wang
 CS5001 Fall 2021
 
-A program that get basic directions on the Seattle Link light rail.
+Test vowelsearch.py
 '''
 
 
