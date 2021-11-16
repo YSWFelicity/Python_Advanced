@@ -15,18 +15,23 @@ def is_valid_UPC(str_UPC):
         Returns:
             True if a given string is a multiple of 10, False otherwise.
     '''
+    if not str_UPC.isdigit():
+        return False
     total = 0
     # iterate from left to right in UPC
     for i, char in enumerate(reversed(str_UPC)):
-        if i % 2 == 0:
+        EVEN_DENOMINATOR = 2
+        if i % EVEN_DENOMINATOR == 0:
             # Add numbers in even positions to toal
             total += int(char)
         else:
             # Multiply numbers in odd positions by 3 then add to total
-            total += 3*int(char)
+            ODD_MULTIPLIER = 3
+            total += ODD_MULTIPLIER * int(char)
 
     # Test if total is a multiple of 10
-    return total % 10 == 0
+    EVEN_MULTIPLIER = 10
+    return total % EVEN_MULTIPLIER == 0
 
 
 def main():

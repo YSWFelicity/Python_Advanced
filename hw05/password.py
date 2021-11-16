@@ -15,7 +15,9 @@ def is_valid_length(password):
         Returns:
             True if a given string is in the range of 9 to 12, False otherwise.
     '''
-    return 9 <= len(password) <= 12
+    MIN_LENGTH = 9
+    MAX_LENGTH = 12
+    return MIN_LENGTH <= len(password) <= MAX_LENGTH
 
 
 def has_letter(password):

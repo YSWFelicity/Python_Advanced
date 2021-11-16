@@ -14,3 +14,4 @@ def test_is_valid_UPC():
     assert(is_valid_UPC("75839523467") is False)
     assert(is_valid_UPC("796030114977") is True)
     assert(is_valid_UPC("657893408568") is False)
+    assert(is_valid_UPC("1234ghc!") is False)

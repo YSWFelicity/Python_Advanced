@@ -1,7 +1,6 @@
 '''
 Yingshu Wang
 CS5001 Fall 2021
-
 A program that test if the string is a palindrome or not.
 '''
 

@@ -35,6 +35,7 @@ def get_reimbursement_amount(mileage):
             The amount the employee should be reimbursed in dollars, a float
             rounded to 2 decimal places.
     '''
+    MILEAGE_RATE = 0.575
     return round(mileage * 0.575, 2)
 
 

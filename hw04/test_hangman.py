@@ -6,13 +6,14 @@ Test hangman.py
 '''
 
 
-from hangman import game
-from pytest import approx
+from hangman import (check, print_guess_msg)
 
 
-def test_game():
-    word_list = ['APPLE', "OBVIOUS", 'XYLOPHONE']
-    word_index = 0
-    assert(game(word_list, word_index) is True)
+def test_check():
+    assert(check("APLEQP", "APPLE") is True)
+    assert(check("APEQWE", "APPLE") is False)
 
-# Not a typical way of testing: using pytest -s test_hangman.py
+
+def test_print_guess_msg():
+    assert(print_guess_msg("APLEQP", "APPLE", 0) == (0, "APPLE"))
+    assert(print_guess_msg("APLOYT", "APPLE", 0) == (1, "APPL_"))
