@@ -2,7 +2,7 @@
 Yingshu Wang
 CS 5001, Fall 2021
 
-This code will get you started with the final project, milestone 2.
+Final project, milestone 2.
 '''
 
 

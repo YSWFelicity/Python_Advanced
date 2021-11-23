@@ -2,7 +2,7 @@
 Yingshu Wang
 CS 5001, Fall 2021
 
-This code will get you started with the final project, milestone 2.
+Final project, milestone 2.
 '''
 
 
@@ -49,8 +49,6 @@ class Board:
             self.a_turtle.left(RIGHT_ANGLE)
         self.a_turtle.end_fill()
         self.a_turtle.penup()
-
-        # screen = self.a_turtle.onclick()
 
     def draw_chess_quares(self):
         '''

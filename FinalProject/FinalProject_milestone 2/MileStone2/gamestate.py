@@ -2,9 +2,8 @@
 Yingshu Wang
 CS 5001, Fall 2021
 
-This code will get you started with the final project, milestone 2.
+Final project, milestone 2.
 '''
-
 
 import turtle
 from .constant import WIDTH, HEIGHT, ROWS, COLS, SQUARE_SIZE, PADDING, INI_TURN
@@ -58,7 +57,7 @@ class GameState():
         '''
         self.pieces = []
         self.create_pieces()
-        self.turn = "red"
+        self.turn = "black"
         self.selected = None
         self.valid_moves = {}
         self.pieces_left_red = self.pieces_left_black = 12
@@ -182,8 +181,8 @@ class GameState():
             piece -- A Piece object that is going to move.
         '''
         if piece != 0 and piece.color == self.turn:
-            self.pieces[piece.row][piece.col] = self.pieces[to_row][to_col]
-            self.pieces[to_row][to_col] = self.pieces[piece.row][piece.col]
+            self.pieces[piece.row][piece.col], self.pieces[to_row][to_col] = \
+                self.pieces[to_row][to_col], self.pieces[piece.row][piece.col]
             self.pieces[to_row][to_col].move(to_row, to_col)
 
     def select(self, x, y):
