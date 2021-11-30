@@ -1,8 +1,11 @@
 '''
-Sample Code
-CS 5001, Fall 2021 - Lecture 9
+Yingshu Wang
+CS 5001, Fall 2021
+
 A deck of cards.
 '''
+
+
 import random
 from playing_card import PlayingCard
 

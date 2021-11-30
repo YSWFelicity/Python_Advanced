@@ -1,6 +1,7 @@
 '''
-Sample Code
-CS 5001, Fall 2021 - Lecture 10
+Yingshu Wang
+CS 5001, Fall 2021
+
 An implementation of the Queue ADT.
 '''
 
